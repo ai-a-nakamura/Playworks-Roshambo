@@ -1,32 +1,12 @@
 
 <!-- Toolbar -->
 <div class="toolbar" role="banner">
-
-  <p>Welcome</p>
-
 </div>
 
 <div class="content" role="main">
 
-  <!-- Highlight Card -->
-  <div class="card highlight-card card-small">
-    <span>{{ title }} app is running!</span>
-  </div>
 
-
-  <div class="choice-container">
-    <app-gamer-choice class="choice"
-      [choiceType]="'rock'"
-      [svgURL]="'../assets/rock.svg'"></app-gamer-choice>
-
-    <app-gamer-choice class="choice"
-      [choiceType]="'paper'"
-      [svgURL]="'../assets/paper.svg'"></app-gamer-choice>
-
-    <app-gamer-choice class="choice"
-      [choiceType]="'scissors'"
-      [svgURL]="'../assets/scissors.svg'"></app-gamer-choice>
-  </div>
+  <app-match-up></app-match-up>
 
 
 

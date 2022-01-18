@@ -1,1 +1,38 @@
-<p>match-up works!</p>
+<div class="choice-container">
+  <app-gamer-choice class="choice"
+                    [svgURL]="'../assets/rock.svg'"
+                    (click)="onClick('rock', 'p1')"
+  ></app-gamer-choice>
+
+  <app-gamer-choice class="choice"
+                    [svgURL]="'../assets/paper.svg'"
+                    (click)="onClick('paper', 'p1')"
+  ></app-gamer-choice>
+
+  <app-gamer-choice class="choice"
+                    [svgURL]="'../assets/scissors.svg'"
+                    (click)="onClick('scissors', 'p1')"
+  ></app-gamer-choice>
+</div>
+
+<div>
+<p *ngIf="player1Choice">Player 1: {{player1Choice}}</p>
+<p *ngIf="player2Choice">Player 2: {{player2Choice}}</p>
+</div>
+
+<div class="choice-container">
+  <app-gamer-choice class="choice"
+                    [svgURL]="'../assets/rock.svg'"
+                    (click)="onClick('rock', 'p2')"
+  ></app-gamer-choice>
+
+  <app-gamer-choice class="choice"
+                    [svgURL]="'../assets/paper.svg'"
+                    (click)="onClick('paper', 'p2')"
+  ></app-gamer-choice>
+
+  <app-gamer-choice class="choice"
+                    [svgURL]="'../assets/scissors.svg'"
+                    (click)="onClick('scissors', 'p2')"
+  ></app-gamer-choice>
+</div>
