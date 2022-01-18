@@ -1,38 +1,41 @@
 <div class="choice-container">
   <app-gamer-choice class="choice"
                     [svgURL]="'../assets/rock.svg'"
-                    (click)="onClick('rock', 'p1')"
+                    (click)="onClick(0, 'p1')"
   ></app-gamer-choice>
 
   <app-gamer-choice class="choice"
                     [svgURL]="'../assets/paper.svg'"
-                    (click)="onClick('paper', 'p1')"
+                    (click)="onClick(1, 'p1')"
   ></app-gamer-choice>
 
   <app-gamer-choice class="choice"
                     [svgURL]="'../assets/scissors.svg'"
-                    (click)="onClick('scissors', 'p1')"
+                    (click)="onClick(2, 'p1')"
   ></app-gamer-choice>
 </div>
 
 <div>
-<p *ngIf="player1Choice">Player 1: {{player1Choice}}</p>
-<p *ngIf="player2Choice">Player 2: {{player2Choice}}</p>
+<p>{{player1.playerName}}: {{choices[player1Choice]}}</p>
+<!-- if both players choose, say "player wins" -->
+<p>{{player2.playerName}}: {{choices[player2Choice]}}</p>
+<p *ngIf="tieCheck()">It's a tie! Choose again</p>
+<p *ngIf="winCheck()">somebody won</p>
 </div>
 
 <div class="choice-container">
   <app-gamer-choice class="choice"
                     [svgURL]="'../assets/rock.svg'"
-                    (click)="onClick('rock', 'p2')"
+                    (click)="onClick(0, 'p2')"
   ></app-gamer-choice>
 
   <app-gamer-choice class="choice"
                     [svgURL]="'../assets/paper.svg'"
-                    (click)="onClick('paper', 'p2')"
+                    (click)="onClick(1, 'p2')"
   ></app-gamer-choice>
 
   <app-gamer-choice class="choice"
                     [svgURL]="'../assets/scissors.svg'"
-                    (click)="onClick('scissors', 'p2')"
+                    (click)="onClick(2, 'p2')"
   ></app-gamer-choice>
 </div>
