@@ -10,9 +10,6 @@ import { PlayerComponent } from './player/player.component';
 })
 export class AppComponent {
   title = 'sandbox';
-  rock = 'rock';
-  paper = 'paper';
-  scissors = 'scissors';
 
   player1: PlayerComponent = new PlayerComponent("Shaun", "s@s.s");
   player2: PlayerComponent = new PlayerComponent("Connie", "c@c.c");

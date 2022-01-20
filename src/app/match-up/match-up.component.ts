@@ -10,6 +10,9 @@ export class MatchUpComponent implements OnInit {
 
 // 		"winnerbracketID": "a3f4095e-39de-43d2-baf4-f8c16f0f6f4d",
 choices: string[] = ["Rock", "Paper", "Scissors"];
+ROCK: string = this.choices[0];
+PAPER: string = this.choices[1];
+SCISSORS: string = this.choices[2];
 
 // 		@Input() player1: string; //TODO: make player object
 // 		@Input() player2: string;
@@ -63,36 +66,40 @@ choices: string[] = ["Rock", "Paper", "Scissors"];
 
   winCheck(): boolean {
     
+    const ROCK = this.ROCK;
+    const PAPER = this.PAPER;
+    const SCISSORS = this.SCISSORS;
+
     if (this.player1Choice !== -1 && this.player2Choice !== -1) {
       const p1 = this.choices[this.player1Choice];
       const p2 = this.choices[this.player2Choice];
 
       switch (p1) {
-        case 'Rock': {
-          if (p2 === 'Paper') {
+        case ROCK: {
+          if (p2 === PAPER) {
             console.log(this.player1.playerName + " won");
           }
-          else if (p2 === 'Scissors') {
+          else if (p2 === SCISSORS) {
             console.log(this.player2.playerName + " won");
           }
           break;
         }
 
-        case 'Paper': {
-          if (p2 === 'Rock') {
+        case PAPER: {
+          if (p2 === ROCK) {
             console.log(this.player1.playerName + " won");
           }
-          else if (p2 === 'Scissors') {
+          else if (p2 === SCISSORS) {
             console.log(this.player2.playerName + " won");
           }
           break;
         }
 
-        case 'Scissors': {
-          if (p2 === 'Paper') {
+        case SCISSORS: {
+          if (p2 === PAPER) {
             console.log(this.player1.playerName + " won");
           }
-          else if (p2 === 'Rock') {
+          else if (p2 === ROCK) {
             console.log(this.player2.playerName + " won");
           }
           break;

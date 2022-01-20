@@ -10,7 +10,6 @@ export class GamerChoiceComponent implements OnInit {
 
   constructor() { }
 
-  @Input() choiceType: string = '';
   @Input() svgURL: string = '';
 
   playerSelection: string = '';
@@ -18,8 +17,6 @@ export class GamerChoiceComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onClick(): void {
-    this.playerSelection = this.choiceType + " chosen";
-  }
+
 
 }
